@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SchroberApplication.Properties
+namespace SchoberApplication.Properties
 {
 
 

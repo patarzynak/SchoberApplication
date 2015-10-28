@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoberApplication", "SchroberApplication\SchoberApplication.csproj", "{B05E9604-4CCB-4127-81B5-89C66DC5FD06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoberApplication", "SchoberApplication\SchoberApplication.csproj", "{F7512865-5C10-47C2-AE18-0784093B66D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B05E9604-4CCB-4127-81B5-89C66DC5FD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B05E9604-4CCB-4127-81B5-89C66DC5FD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B05E9604-4CCB-4127-81B5-89C66DC5FD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B05E9604-4CCB-4127-81B5-89C66DC5FD06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7512865-5C10-47C2-AE18-0784093B66D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7512865-5C10-47C2-AE18-0784093B66D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7512865-5C10-47C2-AE18-0784093B66D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7512865-5C10-47C2-AE18-0784093B66D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

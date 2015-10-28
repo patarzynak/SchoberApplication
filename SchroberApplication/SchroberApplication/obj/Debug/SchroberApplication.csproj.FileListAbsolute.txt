@@ -1,1 +1,8 @@
 C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\bin\Debug\SchroberApplication.exe.config
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\bin\Debug\SchroberApplication.exe
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\bin\Debug\SchroberApplication.pdb
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\obj\Debug\SchroberApplication.csprojResolveAssemblyReference.cache
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\obj\Debug\SchroberApplication.Properties.Resources.resources
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\obj\Debug\SchroberApplication.csproj.GenerateResource.Cache
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\obj\Debug\SchroberApplication.exe
+C:\Users\Lewis\Documents\SchoberApplication\SchroberApplication\SchroberApplication\obj\Debug\SchroberApplication.pdb

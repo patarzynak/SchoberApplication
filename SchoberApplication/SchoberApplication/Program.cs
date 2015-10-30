@@ -6,8 +6,11 @@ using System.Windows.Forms;
 
 namespace SchoberApplication
 {
+
+    public enum AccessLevels { None, Regular, Admin };
     static class Program
     {
+       
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +19,9 @@ namespace SchoberApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainForm());
+
+
         }
     }
 }

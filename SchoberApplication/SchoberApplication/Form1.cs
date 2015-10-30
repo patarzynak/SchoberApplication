@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConnectCsharpToMysql;
 
 namespace SchoberApplication
 {
@@ -15,13 +16,9 @@ namespace SchoberApplication
         public Form1()
         {
             InitializeComponent();
-            test();
+          
          
         }
-        public void test()
-        {
-            DBConnect dbcon = new DBConnect();
-           Console.WriteLine(dbcon.OpenConnection());
-        }
+       
     }
 }

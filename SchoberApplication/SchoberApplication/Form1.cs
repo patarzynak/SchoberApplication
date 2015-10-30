@@ -15,6 +15,13 @@ namespace SchoberApplication
         public Form1()
         {
             InitializeComponent();
+            test();
+         
+        }
+        public void test()
+        {
+            DBConnect dbcon = new DBConnect();
+           Console.WriteLine(dbcon.OpenConnection());
         }
     }
 }

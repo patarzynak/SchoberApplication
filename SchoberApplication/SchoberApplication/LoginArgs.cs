@@ -8,24 +8,19 @@ namespace SchoberApplication
 {
     public class LoginArgs : EventArgs
     {
-        private string message;
-        private MainForm controller;
-        public LoginArgs(string message, MainForm controller)
+        private string loginDetails;
+        public LoginArgs(string loginDetails)
         {
-            this.controller = controller;
-            this.message = message;
+            this.loginDetails = loginDetails;
         }
 
         // This is a straightforward implementation for 
         // declaring a public field
-        public string Message
+        public string LoginDetails
         {
             get
             {
-                controller.userAccess = AccessLevels.Regular;
-                Console.WriteLine(controller.userAccess);
-                
-                return message;
+                return loginDetails;
             }
         }
     }

@@ -13,21 +13,30 @@ namespace SchoberApplication
 {
     public partial class MainForm : Form
     {
-
+        List<Label> _priviledgeLabels;
         Login login;
         public AccessLevels userAccess = AccessLevels.None;
         public MainForm()
         {
             InitializeComponent();
+            _priviledgeLabels = new List<Label>();
+            buttonBox.Controls.Add(graphsButton);
+            buttonBox.Controls.Add(employeeButton);
+            buttonBox.Controls.Add(productButton);
+            buttonBox.Controls.Add(editTableButton);
+            buttonBox.Controls.Add(storeButton);
+            buttonBox.Controls.Add(supplierButton);
+            buttonBox.Controls.Add(logoutButton);
+            
             //Creates LogInScreen which changes user's AccessLevel
             logUser();
-           
+            
         }
 
         private void logUser()
         {
             login = new Login(); //Create a login Screen and Pass it a controller (parent)
-
+        
             login.OnLogin += new Login.LoginHandler(CheckLogin);
             login.ShowDialog();
             
@@ -38,6 +47,7 @@ namespace SchoberApplication
           
             //Check whether the loginDetails are comparable to the ones we have in database and give user according userAccess.
             //e.LoginDetails returns a String in the format  "username%%password"
+            //Currently temp code which will be replaced by a query to database
             if (e.LoginDetails.CompareTo(e.LoginDetails) == 0)
             {
                 userAccess = AccessLevels.Admin;
@@ -47,12 +57,51 @@ namespace SchoberApplication
             {
                 userAccess = AccessLevels.None;
             }
-            Console.WriteLine("User's Access Level is " + userAccess);
-
+            this.StartPosition = FormStartPosition.Manual;
+            //Show this main form again slightly above where the Login page was (Incase it was moved)
+            this.Location = new Point(((Form)a).Location.X, ((Form)a).Location.Y - 150);
             ((Form)a).Close(); //Close the Login Screen and return to whatever screen launched it.
+         //   priviledgeLabels.
+            ShowUserPriviledges(userAccess);
+            
+        }
+
+        private void ShowUserPriviledges(AccessLevels userAccess)
+        {
+           
+                
+            //List<Label> _priviledgeLabels = null;
+            //Console.WriteLine(userAccess);
+            //_priviledgeLabels = new List<Label>();
+         
+
+                //for (int i = 0; i < buttonBox.Controls.Count; i++)
+                //{
+
+                    //_priviledgeLabels.Add(new Label());
+                    //_priviledgeLabels[i].Font = yesLabel.Font;
+                    // _priviledgeLabels[i].Size = yesLabel.Size;
+                    //_priviledgeLabels[i].ForeColor = yesLabel.ForeColor;
+                    //_priviledgeLabels[i].AutoSize = true;
+                    // _priviledgeLabels[i].Text = yesLabel.Text;
+                    ////_priviledgeLabels[i].StartPosition = FormStartPosition.Manual;
+                    ////_priviledgeLabels[i].Location = new Point(200 , 200);
+                    //_priviledgeLabels[i].Location = new Point(buttonBox.Controls[i].Location.X + buttonBox.Controls[i].Size.Width + 5, buttonBox.Controls[i].Location.Y + 5); 
+                    //_priviledgeLabels[i].Visible = true;
+                    //_priviledgeLabels[i].Show();
+                    //_priviledgeLabels[i].BringToFront();
+               
+                //}
+            
+          
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

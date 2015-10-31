@@ -41,7 +41,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(442, 136);
+            this.label2.Location = new System.Drawing.Point(254, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 55);
             this.label2.TabIndex = 1;
@@ -51,7 +51,7 @@
             // cTextUsername
             // 
             this.cTextUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.32F);
-            this.cTextUsername.Location = new System.Drawing.Point(294, 235);
+            this.cTextUsername.Location = new System.Drawing.Point(294, 92);
             this.cTextUsername.Name = "cTextUsername";
             this.cTextUsername.Size = new System.Drawing.Size(150, 20);
             this.cTextUsername.TabIndex = 5;
@@ -59,11 +59,12 @@
             this.cTextUsername.WaterMarkActiveForeColor = System.Drawing.Color.Gray;
             this.cTextUsername.WaterMarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cTextUsername.WaterMarkForeColor = System.Drawing.Color.LightGray;
+            this.cTextUsername.TextChanged += new System.EventHandler(this.cTextUsername_TextChanged);
             // 
             // cTextPassword
             // 
             this.cTextPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.32F);
-            this.cTextPassword.Location = new System.Drawing.Point(294, 288);
+            this.cTextPassword.Location = new System.Drawing.Point(294, 118);
             this.cTextPassword.Name = "cTextPassword";
             this.cTextPassword.Size = new System.Drawing.Size(150, 20);
             this.cTextPassword.TabIndex = 6;
@@ -74,7 +75,7 @@
             // 
             // signinButton
             // 
-            this.signinButton.Location = new System.Drawing.Point(322, 341);
+            this.signinButton.Location = new System.Drawing.Point(315, 157);
             this.signinButton.Name = "signinButton";
             this.signinButton.Size = new System.Drawing.Size(92, 24);
             this.signinButton.TabIndex = 7;
@@ -88,7 +89,7 @@
             this.helpMissingUsernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpMissingUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.helpMissingUsernameLabel.ForeColor = System.Drawing.Color.Red;
-            this.helpMissingUsernameLabel.Location = new System.Drawing.Point(177, 386);
+            this.helpMissingUsernameLabel.Location = new System.Drawing.Point(185, 206);
             this.helpMissingUsernameLabel.Name = "helpMissingUsernameLabel";
             this.helpMissingUsernameLabel.Size = new System.Drawing.Size(413, 39);
             this.helpMissingUsernameLabel.TabIndex = 8;
@@ -103,19 +104,20 @@
             this.helpMissingPasswordLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpMissingPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.helpMissingPasswordLabel.ForeColor = System.Drawing.Color.Red;
-            this.helpMissingPasswordLabel.Location = new System.Drawing.Point(177, 386);
+            this.helpMissingPasswordLabel.Location = new System.Drawing.Point(185, 206);
             this.helpMissingPasswordLabel.Name = "helpMissingPasswordLabel";
             this.helpMissingPasswordLabel.Size = new System.Drawing.Size(405, 39);
             this.helpMissingPasswordLabel.TabIndex = 9;
             this.helpMissingPasswordLabel.Text = "Please Enter a Password";
             this.helpMissingPasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.helpMissingPasswordLabel.Visible = false;
+            this.helpMissingPasswordLabel.Click += new System.EventHandler(this.helpMissingPasswordLabel_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(697, 283);
             this.Controls.Add(this.helpMissingPasswordLabel);
             this.Controls.Add(this.helpMissingUsernameLabel);
             this.Controls.Add(this.signinButton);
@@ -123,6 +125,7 @@
             this.Controls.Add(this.cTextUsername);
             this.Controls.Add(this.label2);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

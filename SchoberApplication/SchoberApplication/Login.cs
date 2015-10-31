@@ -107,6 +107,16 @@ namespace SchoberApplication
 
         }
 
+        private void cTextUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpMissingPasswordLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }

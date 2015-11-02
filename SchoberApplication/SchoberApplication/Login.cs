@@ -117,6 +117,23 @@ namespace SchoberApplication
 
         }
 
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+        }
+
+      
+
 
     }
 }

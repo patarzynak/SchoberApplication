@@ -309,6 +309,7 @@
             this.logoutButton.TabIndex = 7;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = true;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // noLabel
             // 
@@ -345,6 +346,7 @@
             this.Controls.Add(this.noLabel);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.buttonBox.ResumeLayout(false);
             this.buttonBox.PerformLayout();
             this.ResumeLayout(false);

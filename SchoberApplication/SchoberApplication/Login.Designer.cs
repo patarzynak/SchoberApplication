@@ -35,13 +35,14 @@
             this.signinButton = new System.Windows.Forms.Button();
             this.helpMissingUsernameLabel = new System.Windows.Forms.Label();
             this.helpMissingPasswordLabel = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(254, 9);
+            this.label2.Location = new System.Drawing.Point(195, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 55);
             this.label2.TabIndex = 1;
@@ -51,7 +52,7 @@
             // cTextUsername
             // 
             this.cTextUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.32F);
-            this.cTextUsername.Location = new System.Drawing.Point(294, 92);
+            this.cTextUsername.Location = new System.Drawing.Point(235, 92);
             this.cTextUsername.Name = "cTextUsername";
             this.cTextUsername.Size = new System.Drawing.Size(150, 20);
             this.cTextUsername.TabIndex = 5;
@@ -64,7 +65,7 @@
             // cTextPassword
             // 
             this.cTextPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.32F);
-            this.cTextPassword.Location = new System.Drawing.Point(294, 118);
+            this.cTextPassword.Location = new System.Drawing.Point(235, 118);
             this.cTextPassword.Name = "cTextPassword";
             this.cTextPassword.Size = new System.Drawing.Size(150, 20);
             this.cTextPassword.TabIndex = 6;
@@ -75,7 +76,7 @@
             // 
             // signinButton
             // 
-            this.signinButton.Location = new System.Drawing.Point(315, 157);
+            this.signinButton.Location = new System.Drawing.Point(256, 157);
             this.signinButton.Name = "signinButton";
             this.signinButton.Size = new System.Drawing.Size(92, 24);
             this.signinButton.TabIndex = 7;
@@ -89,7 +90,7 @@
             this.helpMissingUsernameLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpMissingUsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.helpMissingUsernameLabel.ForeColor = System.Drawing.Color.Red;
-            this.helpMissingUsernameLabel.Location = new System.Drawing.Point(185, 206);
+            this.helpMissingUsernameLabel.Location = new System.Drawing.Point(107, 188);
             this.helpMissingUsernameLabel.Name = "helpMissingUsernameLabel";
             this.helpMissingUsernameLabel.Size = new System.Drawing.Size(413, 39);
             this.helpMissingUsernameLabel.TabIndex = 8;
@@ -104,7 +105,7 @@
             this.helpMissingPasswordLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpMissingPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
             this.helpMissingPasswordLabel.ForeColor = System.Drawing.Color.Red;
-            this.helpMissingPasswordLabel.Location = new System.Drawing.Point(185, 206);
+            this.helpMissingPasswordLabel.Location = new System.Drawing.Point(107, 188);
             this.helpMissingPasswordLabel.Name = "helpMissingPasswordLabel";
             this.helpMissingPasswordLabel.Size = new System.Drawing.Size(405, 39);
             this.helpMissingPasswordLabel.TabIndex = 9;
@@ -113,11 +114,23 @@
             this.helpMissingPasswordLabel.Visible = false;
             this.helpMissingPasswordLabel.Click += new System.EventHandler(this.helpMissingPasswordLabel_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(502, 230);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(183, 41);
+            this.exitButton.TabIndex = 10;
+            this.exitButton.Text = "Exit Application";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 283);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.helpMissingPasswordLabel);
             this.Controls.Add(this.helpMissingUsernameLabel);
             this.Controls.Add(this.signinButton);
@@ -127,6 +140,8 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
+            this.Load += new System.EventHandler(this.Login_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +156,6 @@
         private System.Windows.Forms.Button signinButton;
         private System.Windows.Forms.Label helpMissingUsernameLabel;
         private System.Windows.Forms.Label helpMissingPasswordLabel;
+        private System.Windows.Forms.Button exitButton;
     }
 }

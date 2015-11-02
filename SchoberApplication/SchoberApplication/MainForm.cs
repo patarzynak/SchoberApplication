@@ -47,7 +47,9 @@ namespace SchoberApplication
             login = new Login(); //Create a login Screen 
         
             login.OnLogin += new Login.LoginHandler(CheckLogin);
+            this.Hide();
             login.ShowDialog();
+
             
         }
 
@@ -123,8 +125,8 @@ namespace SchoberApplication
                     //_priviledgeLabels[i].BringToFront();
                
                 //}
-            
-          
+
+            this.Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -146,6 +148,20 @@ namespace SchoberApplication
         {
 
         }
+
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            userAccess = AccessLevels.None;
+            logUser();
+        }
+
+        private void MainForm_Activated(object sender, EventArgs e)
+        {
+            if (userAccess == AccessLevels.None)
+                Application.Exit();
+        }
+
+     
        
     }
 

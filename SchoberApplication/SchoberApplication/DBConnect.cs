@@ -60,6 +60,9 @@ namespace ConnectCsharpToMysql
                     case 1045:
                         MessageBox.Show("Invalid username/password, please try again");
                         break;
+                    default:
+               //         Console.WriteLine(ex.);
+                        break;
                 }
                 return false;
             }

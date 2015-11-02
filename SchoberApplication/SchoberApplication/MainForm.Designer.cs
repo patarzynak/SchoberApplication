@@ -139,9 +139,7 @@
             this.buttonBox.Controls.Add(this.storePrivLabelNo);
             this.buttonBox.Controls.Add(this.employeePrivLabelYes);
             this.buttonBox.Controls.Add(this.productPrivLabelNo);
-            this.buttonBox.Controls.Add(this.noLabel);
             this.buttonBox.Controls.Add(this.employeePrivLabelNo);
-            this.buttonBox.Controls.Add(this.yesLabel);
             this.buttonBox.Controls.Add(this.logoutButton);
             this.buttonBox.Controls.Add(this.editTableButton);
             this.buttonBox.Controls.Add(this.employeeButton);
@@ -293,7 +291,7 @@
             this.noLabel.AutoSize = true;
             this.noLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.noLabel.Location = new System.Drawing.Point(59, 9);
+            this.noLabel.Location = new System.Drawing.Point(181, 0);
             this.noLabel.Name = "noLabel";
             this.noLabel.Size = new System.Drawing.Size(16, 13);
             this.noLabel.TabIndex = 9;
@@ -317,7 +315,7 @@
             this.yesLabel.AutoSize = true;
             this.yesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesLabel.ForeColor = System.Drawing.Color.Green;
-            this.yesLabel.Location = new System.Drawing.Point(38, 9);
+            this.yesLabel.Location = new System.Drawing.Point(169, 0);
             this.yesLabel.Name = "yesLabel";
             this.yesLabel.Size = new System.Drawing.Size(15, 13);
             this.yesLabel.TabIndex = 8;
@@ -341,6 +339,8 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonBox);
+            this.Controls.Add(this.yesLabel);
+            this.Controls.Add(this.noLabel);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.buttonBox.ResumeLayout(false);

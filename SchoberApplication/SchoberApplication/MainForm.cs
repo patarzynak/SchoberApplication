@@ -15,22 +15,31 @@ namespace SchoberApplication
     {
         List<Label> _priviledgeLabels;
         Login login;
+        DBConnect db;
         public AccessLevels userAccess = AccessLevels.None;
         public MainForm()
         {
             InitializeComponent();
             _priviledgeLabels = new List<Label>();
-            buttonBox.Controls.Add(graphsButton);
-            buttonBox.Controls.Add(employeeButton);
-            buttonBox.Controls.Add(productButton);
-            buttonBox.Controls.Add(editTableButton);
-            buttonBox.Controls.Add(storeButton);
-            buttonBox.Controls.Add(supplierButton);
-            buttonBox.Controls.Add(logoutButton);
+            //buttonBox.Controls.Add(graphsButton);
+            //buttonBox.Controls.Add(employeeButton);
+            //buttonBox.Controls.Add(productButton);
+            //buttonBox.Controls.Add(editTableButton);
+            //buttonBox.Controls.Add(storeButton);
+            //buttonBox.Controls.Add(supplierButton);
+            //buttonBox.Controls.Add(logoutButton);
             
             //Creates LogInScreen which changes user's AccessLevel
             logUser();
+
+            connectDataBase();
             
+        }
+
+        private void connectDataBase()
+        {
+            db = new DBConnect();
+            Console.WriteLine(db.OpenConnection());
         }
 
         private void logUser()
@@ -68,8 +77,20 @@ namespace SchoberApplication
 
         private void ShowUserPriviledges(AccessLevels userAccess)
         {
-           
-                
+            if (userAccess == AccessLevels.Admin)
+            {
+                foreach (Control button in buttonBox.Controls)
+                {
+                    if (button.Name.Contains("Yes"))
+                        button.Visible = true;
+                }
+            }
+            else if(userAccess == AccessLevels.Regular)
+            {
+                editPrivLabelNo.Visible = true;
+                //ADD REST OF PRIVILEDGES HERE.
+
+            }
             //List<Label> _priviledgeLabels = null;
             //Console.WriteLine(userAccess);
             //_priviledgeLabels = new List<Label>();

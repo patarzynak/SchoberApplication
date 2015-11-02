@@ -84,6 +84,7 @@
             this.productButton.TabIndex = 2;
             this.productButton.Text = "Product";
             this.productButton.UseVisualStyleBackColor = true;
+            this.productButton.Click += new System.EventHandler(this.productButton_Click);
             // 
             // storeButton
             // 
@@ -268,7 +269,7 @@
             this.employeePrivLabelYes.AutoSize = true;
             this.employeePrivLabelYes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeePrivLabelYes.ForeColor = System.Drawing.Color.Green;
-            this.employeePrivLabelYes.Location = new System.Drawing.Point(129, 43);
+            this.employeePrivLabelYes.Location = new System.Drawing.Point(131, 43);
             this.employeePrivLabelYes.Name = "employeePrivLabelYes";
             this.employeePrivLabelYes.Size = new System.Drawing.Size(15, 13);
             this.employeePrivLabelYes.TabIndex = 10;

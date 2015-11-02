@@ -44,7 +44,7 @@ namespace SchoberApplication
 
         private void logUser()
         {
-            login = new Login(); //Create a login Screen and Pass it a controller (parent)
+            login = new Login(); //Create a login Screen 
         
             login.OnLogin += new Login.LoginHandler(CheckLogin);
             login.ShowDialog();
@@ -57,7 +57,9 @@ namespace SchoberApplication
             //Check whether the loginDetails are comparable to the ones we have in database and give user according userAccess.
             //e.LoginDetails returns a String in the format  "username%%password"
             //Currently temp code which will be replaced by a query to database
-            
+            Console.WriteLine(e.LoginDetails);
+
+
             if (e.LoginDetails.CompareTo(e.LoginDetails) == 0)
             {
                 userAccess = AccessLevels.Admin;
@@ -136,6 +138,11 @@ namespace SchoberApplication
         }
 
         private void productPrivLabelYes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productButton_Click(object sender, EventArgs e)
         {
 
         }

@@ -57,6 +57,7 @@ namespace SchoberApplication
             //Check whether the loginDetails are comparable to the ones we have in database and give user according userAccess.
             //e.LoginDetails returns a String in the format  "username%%password"
             //Currently temp code which will be replaced by a query to database
+            
             if (e.LoginDetails.CompareTo(e.LoginDetails) == 0)
             {
                 userAccess = AccessLevels.Admin;
@@ -77,6 +78,12 @@ namespace SchoberApplication
 
         private void ShowUserPriviledges(AccessLevels userAccess)
         {
+            foreach (Control button in buttonBox.Controls)
+            {
+                if (button.Name.Contains("Yes") || button.Name.Contains("No"))
+                    button.Visible = false;
+            }
+
             if (userAccess == AccessLevels.Admin)
             {
                 foreach (Control button in buttonBox.Controls)
@@ -88,6 +95,7 @@ namespace SchoberApplication
             else if(userAccess == AccessLevels.Regular)
             {
                 editPrivLabelNo.Visible = true;
+                productPrivLabelYes.Visible = true;
                 //ADD REST OF PRIVILEDGES HERE.
 
             }
@@ -123,6 +131,11 @@ namespace SchoberApplication
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void productPrivLabelYes_Click(object sender, EventArgs e)
         {
 
         }

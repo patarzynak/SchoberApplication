@@ -47,10 +47,10 @@
             this.storePrivLabelNo = new System.Windows.Forms.Label();
             this.employeePrivLabelYes = new System.Windows.Forms.Label();
             this.productPrivLabelNo = new System.Windows.Forms.Label();
-            this.noLabel = new System.Windows.Forms.Label();
             this.employeePrivLabelNo = new System.Windows.Forms.Label();
-            this.yesLabel = new System.Windows.Forms.Label();
             this.logoutButton = new System.Windows.Forms.Button();
+            this.noLabel = new System.Windows.Forms.Label();
+            this.yesLabel = new System.Windows.Forms.Label();
             this.buttonBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -249,6 +249,7 @@
             this.productPrivLabelYes.TabIndex = 11;
             this.productPrivLabelYes.Text = "Y";
             this.productPrivLabelYes.Visible = false;
+            this.productPrivLabelYes.Click += new System.EventHandler(this.productPrivLabelYes_Click);
             // 
             // storePrivLabelNo
             // 
@@ -286,18 +287,6 @@
             this.productPrivLabelNo.Text = "N";
             this.productPrivLabelNo.Visible = false;
             // 
-            // noLabel
-            // 
-            this.noLabel.AutoSize = true;
-            this.noLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.noLabel.Location = new System.Drawing.Point(181, 0);
-            this.noLabel.Name = "noLabel";
-            this.noLabel.Size = new System.Drawing.Size(16, 13);
-            this.noLabel.TabIndex = 9;
-            this.noLabel.Text = "N";
-            this.noLabel.Visible = false;
-            // 
             // employeePrivLabelNo
             // 
             this.employeePrivLabelNo.AutoSize = true;
@@ -310,6 +299,28 @@
             this.employeePrivLabelNo.Text = "N";
             this.employeePrivLabelNo.Visible = false;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Location = new System.Drawing.Point(13, 494);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(112, 32);
+            this.logoutButton.TabIndex = 7;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = true;
+            // 
+            // noLabel
+            // 
+            this.noLabel.AutoSize = true;
+            this.noLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.noLabel.Location = new System.Drawing.Point(181, 0);
+            this.noLabel.Name = "noLabel";
+            this.noLabel.Size = new System.Drawing.Size(16, 13);
+            this.noLabel.TabIndex = 9;
+            this.noLabel.Text = "N";
+            this.noLabel.Visible = false;
+            // 
             // yesLabel
             // 
             this.yesLabel.AutoSize = true;
@@ -321,16 +332,6 @@
             this.yesLabel.TabIndex = 8;
             this.yesLabel.Text = "Y";
             this.yesLabel.Visible = false;
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Location = new System.Drawing.Point(13, 494);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(112, 32);
-            this.logoutButton.TabIndex = 7;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
